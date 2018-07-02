@@ -1,0 +1,7 @@
+.btn {
+    @apply .bg-teal-dark .text-teal-lightest .py-2 .px-4 .rounded;
+}
+
+.btn:hover {
+    @apply .bg-teal;
+}

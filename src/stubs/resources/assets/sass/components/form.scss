@@ -1,0 +1,11 @@
+.field {
+    @apply .block .appearance-none .w-full .bg-grey-lighter .border .border-grey-lighter .px-2 .py-2 .rounded;
+}
+
+.field:hover {
+    @apply .bg-white .border-grey-light;
+}
+
+.custom-outline:focus {
+    @apply .outline-none .shadow-outline;
+}
