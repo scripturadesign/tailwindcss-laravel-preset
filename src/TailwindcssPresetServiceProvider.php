@@ -15,8 +15,8 @@ class TailwindcssPresetServiceProvider extends ServiceProvider
     {
         PresetCommand::macro('scriptura', function (PresetCommand $command) {
             TailwindcssPreset::install($command);
-            $command->info('Skeleton scaffolding installed successfully.');
-            $command->comment('Please run "npm install && npm run dev" to compile your fresh scaffolding.');
+            $command->info('Scriptura scaffolding installed successfully.');
+            $command->comment('Please run "npm install && npm run dev" or "yarn && yarn run dev" to compile your fresh scaffolding.');
         });
     }
 }
