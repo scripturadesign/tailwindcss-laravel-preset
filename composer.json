@@ -1,6 +1,6 @@
 {
-    "name": "scriptura/tailwindcss-preset",
-    "description": "Laravel 5.5.x Front-end preset for tailwindcss",
+    "name": "scripturadesign/tailwindcss-laravel-preset",
+    "description": "Laravel >5.5.x Front-end preset for tailwindcss",
     "keywords": ["laravel", "preset", "tailwind", "tailwindcss"],
     "license": "MIT",
     "require": {
