@@ -11,11 +11,13 @@ the templates I've redesigned using Tailwind.
 I have "stolen" a few things from a few different presets I've looked at
 and customised it to my preference.
 
+
 ## Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [Screenshots](#screenshots)
 - [Credits](#credits)
 - [License](#license)
 
@@ -34,14 +36,32 @@ And run the preset script using:
 php artisan preset scriptura
 ```
 
+
+## Screenshots
+
+![Welcome](/screens/screen_welcome.png)
+
+![Register](/screens/screen_register.png)
+
+![Login](/screens/screen_login.png)
+
+![Send Password Reset](/screens/screen_forgot.png)
+
+![Reset Password](/screens/screen_reset.png)
+
+![Dashboard](/screens/screen_dashboard.png)
+
+
 ## Contributing
 
 I'm open to suggestions, but this is mainly made for my own usage so it might be a bit opinionated.
+
 
 ## Credits
 
 - [Martin Dilling-Hansen][link-author]
 - [All Contributors][link-contributors]
+
 
 ## License
 
