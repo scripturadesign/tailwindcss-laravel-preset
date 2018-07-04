@@ -1,22 +1,27 @@
 {
-    "name": "scripturadesign/tailwindcss-laravel-preset",
-    "description": "Laravel >5.5.x Front-end preset for tailwindcss",
-    "keywords": ["laravel", "preset", "tailwind", "tailwindcss"],
-    "license": "MIT",
-    "require": {
-        "laravel/framework": "5.5.*|5.6.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Scriptura\\TailwindcssPreset\\": "src/"
-        }
-    },
-    "extra": {
-      "laravel": {
-        "providers": [
-          "Scriptura\\TailwindcssPreset\\TailwindcssPresetServiceProvider"
-       ]
-      }
+  "name": "scripturadesign/tailwindcss-laravel-preset",
+  "description": "Laravel >5.5.x Front-end preset for tailwindcss",
+  "keywords": [
+    "laravel",
+    "preset",
+    "tailwind",
+    "tailwindcss"
+  ],
+  "license": "MIT",
+  "require": {
+    "laravel/framework": "5.5.*|5.6.*",
+    "symfony/process": "^4.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Scriptura\\TailwindcssPreset\\": "src/"
     }
-
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Scriptura\\TailwindcssPreset\\TailwindcssPresetServiceProvider"
+      ]
+    }
+  }
 }
