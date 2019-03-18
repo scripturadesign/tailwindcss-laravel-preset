@@ -28,7 +28,7 @@ class TailwindcssPresetServiceProvider extends ServiceProvider
             }
 
             $this->offerToRun('composer require barryvdh/laravel-ide-helper', $command);
-            $this->offerToRun('composer require doctrine/dbal', $command);
+            $this->offerToRun('composer require doctrine/dbal --dev', $command);
             $this->offerToRun('composer require barryvdh/laravel-debugbar', $command);
             $this->offerToRun('php artisan ide-helper:generate', $command);
             $this->offerToRun('php artisan ide-helper:meta', $command);

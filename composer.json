@@ -1,6 +1,6 @@
 {
   "name": "scripturadesign/tailwindcss-laravel-preset",
-  "description": "Laravel >5.5.x Front-end preset for tailwindcss",
+  "description": "Laravel >5.7.x Front-end preset for tailwindcss",
   "keywords": [
     "laravel",
     "preset",
@@ -9,7 +9,7 @@
   ],
   "license": "MIT",
   "require": {
-    "laravel/framework": "5.5.*|5.6.*",
+    "laravel/framework": "5.7.*|5.8.*",
     "symfony/process": "^4.1"
   },
   "autoload": {

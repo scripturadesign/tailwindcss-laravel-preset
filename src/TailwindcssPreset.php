@@ -42,7 +42,7 @@ class TailwindcssPreset extends Preset
             'laravel-mix-purgecss' => '^2.2.0',
             'postcss-nesting' => '^5.0.0',
             'postcss-import' => '^11.1.0',
-            'tailwindcss' => '>=0.5.3',
+            'tailwindcss' => '>=0.7.4',
         ];
         // packages to remove from the package.json
         $packagesToRemove = [
@@ -59,15 +59,14 @@ class TailwindcssPreset extends Preset
         static::printHeadline('Update Styles');
 
         self::delete([
-            resource_path('assets/sass'),
-            public_path('js/app.js'),
+            resource_path('sass'),
             public_path('css/app.css'),
         ]);
         self::ensure([
-            resource_path('assets/sass'),
+            resource_path('sass'),
         ]);
         self::copy([
-            __DIR__.'/stubs/resources/assets/sass' => resource_path('assets/sass'),
+            __DIR__.'/stubs/resources/assets/sass' => resource_path('sass'),
         ]);
     }
 
@@ -84,9 +83,15 @@ class TailwindcssPreset extends Preset
     {
         static::printHeadline('Update Javascript');
 
+        self::delete([
+            public_path('js/app.js'),
+        ]);
+        self::ensure([
+            resource_path('js'),
+        ]);
         self::copy([
-            __DIR__.'/stubs/app.js' => resource_path('assets/js/app.js'),
-            __DIR__.'/stubs/bootstrap.js' => resource_path('assets/js/bootstrap.js'),
+            __DIR__.'/stubs/app.js' => resource_path('js/app.js'),
+            __DIR__.'/stubs/bootstrap.js' => resource_path('js/bootstrap.js'),
         ]);
     }
 
@@ -100,7 +105,7 @@ class TailwindcssPreset extends Preset
         ]);
 
         // Add Auth routes in 'routes/web.php'
-        $auth_route_entry = "Auth::routes();\n\nRoute::get('/home', 'HomeController@index')->name('home');\n\n";
+        $auth_route_entry = "Auth::routes(['verify' => true]);\n\nRoute::get('/home', 'HomeController@index')->name('home');\n\n";
         file_put_contents('./routes/web.php', $auth_route_entry, FILE_APPEND);
 
         self::delete([
@@ -108,6 +113,7 @@ class TailwindcssPreset extends Preset
             resource_path('views/welcome.blade.php'),
             resource_path('views/auth/login.blade.php'),
             resource_path('views/auth/register.blade.php'),
+            resource_path('views/auth/verify.blade.php'),
             resource_path('views/auth/passwords/email.blade.php'),
             resource_path('views/auth/passwords/reset.blade.php'),
             resource_path('views/components/form-card.blade.php'),

@@ -1,4 +1,4 @@
-# Tailwindcss preset for Laravel >5.5
+# Tailwindcss preset for Laravel >5.7
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
